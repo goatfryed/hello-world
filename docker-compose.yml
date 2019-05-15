@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    image: nginx:1.15-alpine
+    volumes:
+      - "./develop/nginx/sites:/etc/nginx/conf.d/"
+      - "./public:/hello-world"
+    ports:
+      - 80:80
+    restart: always
