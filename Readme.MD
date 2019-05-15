@@ -30,9 +30,17 @@ Add php to the docker stack.
 
 Adjust [site config](develop/nginx/sites/hello-web.conf). For nice config defaults check out this [Spoiler](https://symfony.com/doc/current/setup/web_server_configuration.html)
 
+Copy [index.html](public/index.html) to [index.php](public/index.php). Now we're running php... and it does nothing.
+
 Checkout
 * http://hello.world.test/
 * http://hello.world.test/index.html
 * http://hello.world.test/index.php
 * http://hello.world.test/someother/stuff
 
+## Composer
+Use aaaaall the dependencies. We use [composer](https://getcomposer.org/) for php dependency management and kick start
+~~~
+composer create-project symfony/skeleton hello-php 4.2.8.3
+mv -vn ./public/* ./hello-php/public/
+~~~
