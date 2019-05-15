@@ -64,6 +64,7 @@ Note that we won't use the -D option, since we build the source and everything i
 npm add @babel/core@^7.0 \
   @babel/preset-react@^7.0 \
   @symfony/webpack-encore@^0.27 \
+  core-js@3 \
   react-dom@^16.8 \
   react@^16.8 \
   webpack-notifier@^1.6 \
@@ -72,5 +73,5 @@ npm add @babel/core@^7.0 \
 
 Luckily, it's 2019, so it's only half the internet anymore.
 ~~~
-added 878 packages from 479 contributors and audited 15725 packages in 54.277s
+added 879 packages from 479 contributors and audited 15726 packages in 54.277s
 ~~~
