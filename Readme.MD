@@ -8,3 +8,5 @@ git init hello-world && cd ./hello-world
 ~~~
 
 Maybe some [.gitignore](.gitignore) for IDE files and stuff.
+
+Now for a [html page](index.html)
