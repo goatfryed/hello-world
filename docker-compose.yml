@@ -6,6 +6,7 @@ services:
     volumes:
       - "./develop/nginx/sites:/etc/nginx/conf.d/"
       - "./hello-php/public:/hello-php/"
+      - "./hello-js/public:/hello-js/"
     ports:
       - 80:80
     restart: always

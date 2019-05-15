@@ -28,7 +28,7 @@ In the real world, often static pages are not enough. In our case, we want to se
 
 Add php to the docker stack.
 
-Adjust [site config](develop/nginx/sites/hello-web.conf). For nice config defaults check out this [Spoiler](https://symfony.com/doc/current/setup/web_server_configuration.html)
+Adjust [site config](develop/nginx/sites/hello-php.conf). For nice config defaults check out this [Spoiler](https://symfony.com/doc/current/setup/web_server_configuration.html)
 
 Copy [index.html](public/index.html) to [index.php](public/index.php). Now we're running php... and it does nothing.
 
