@@ -46,3 +46,8 @@ mv -vn ./public/* ./hello-php/public/
 cd hello-php
 composer req annotations
 ~~~
+
+## Writing our Controller
+[MessageController](hello-php/src/Controller/MessageController.php)
+
+## Enter the frontend
