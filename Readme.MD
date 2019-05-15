@@ -43,4 +43,6 @@ Use aaaaall the dependencies. We use [composer](https://getcomposer.org/) for ph
 ~~~
 composer create-project symfony/skeleton hello-php 4.2.8.3
 mv -vn ./public/* ./hello-php/public/
+cd hello-php
+composer req annotations
 ~~~
