@@ -15,6 +15,7 @@ services:
     image: php:7.3-fpm-alpine
     volumes:
       - ".:/hello-php"
+      - "./docker/php/conf.d:/usr/local/etc/php/conf.d/00_php.ini"
     working_dir: "/hello-php"
     #expose: ## often seen, but it's more documentation than anything useful.
     #  - 9000
