@@ -2,7 +2,11 @@
   "name": "hello-js",
   "version": "1.0.0",
   "description": "hello world javascript frontend",
-  "scripts": {},
+  "scripts": {
+    "build": "encore production --progress",
+    "dev": "encore dev",
+    "watch": "encore dev --watch"
+  },
   "author": "Omar Sood <goatfryed@gmail.com>",
   "license": "MIT",
   "dependencies": {
