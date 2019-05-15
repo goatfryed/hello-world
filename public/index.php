@@ -6,6 +6,6 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-Hello World from html, docker &amp; nginx!
+Hello World from php, docker &amp; nginx!
 </body>
 </html>

@@ -5,7 +5,16 @@ services:
     image: nginx:1.15-alpine
     volumes:
       - "./develop/nginx/sites:/etc/nginx/conf.d/"
-      - "./public:/hello-world"
+      - "./public:/hello-php"
     ports:
       - 80:80
     restart: always
+    links:
+      - php
+  php:
+    image: php:7.3-fpm-alpine
+    volumes:
+      - ".:/hello-php"
+    working_dir: "/hello-php"
+    #expose: ## often seen, but it's more documentation than anything useful.
+    #  - 9000
