@@ -8,7 +8,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 module.exports = Encore.setOutputPath('public')
 
-    .addEntry( "app", "./src/app.js")
+    .addEntry( "app", "./src/app.jsx")
 
     .setOutputPath("public/build")
     .setPublicPath("/build")
