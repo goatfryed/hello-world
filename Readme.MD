@@ -55,6 +55,8 @@ composer req annotations
 ## Enter the frontend
 Let's go a few steps back to static web, then add some javascript.
 
+
+## Hello, World( Wide Web) (<- the most fitting place)
 Next, we download the hole internet and store it in a hell called node_modules.
 
 We want to use react to render our page with javascript. to write sweet react code, we want to use the jsx syntax.
@@ -76,6 +78,11 @@ npm add @babel/core@^7.0 \
 Luckily, it's 2019, so it's only half the internet anymore.
 ~~~
 added 879 packages from 479 contributors and audited 15726 packages in 54.277s
+~~~
+
+Then we add some [webpack config](hello-js/webpack.config.js), move the javascript out of the public root to generate back to there again.
+~~~
+cd hello-js && npm run dev
 ~~~
 
 ## Render static site from javascript
