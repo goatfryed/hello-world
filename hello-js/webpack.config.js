@@ -8,7 +8,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 module.exports = Encore.setOutputPath('public')
 
-    .addEntry( "app", "./src/app.js")
+    .addEntry( "app", "./src/app.tsx")
 
     .setOutputPath("public/build")
     .setPublicPath("/build")
@@ -30,6 +30,7 @@ module.exports = Encore.setOutputPath('public')
         }
     )
     .enableReactPreset()
+    .enableTypeScriptLoader()
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     

@@ -107,3 +107,8 @@ Writing PHP sucks. Writing javascript sucks. Writing css sucks. You know what su
 npm add @typescript@^3.4 ts-loader@^5.3 @types/react @types/react-dom
 ~~~
 Writing shell commands is probably the only thing, that's never gonna suck.
+
+Okay, let's wire it up in [webpack config](hello-js/webpack.config.js).
+Don't forget the [typescipt config](hello-js/tsconfig.json).
+
+Note, that it would be cooler to use the babel typescript loader for an wholesome experience, but it's only early 2019 yet.
