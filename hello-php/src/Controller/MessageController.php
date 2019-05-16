@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MessageController
 {
     /**
-     * @Route("/message/")
+     * @Route("/rest/message/")
      * @return JsonResponse
      */
     public function hello(): JsonResponse

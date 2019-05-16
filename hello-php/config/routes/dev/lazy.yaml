@@ -1,0 +1,7 @@
+
+redirect-pls:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /rest/message
+        permanent: false
