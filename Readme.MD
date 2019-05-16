@@ -87,3 +87,8 @@ Because
 ~~~
 npm add html-webpack-plugin@^3.2
 ~~~
+
+## CSS
+Okay, enough of the ugliness. We want to beautify our website with some need styling and responsiveness.
+Of course, writing real css is for some crazy, insane devil-gods. So we skip this part and add just some
+[look-good-classes](https://bulma.io/documentation/overview/start/). Responsiveness included.
