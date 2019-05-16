@@ -112,3 +112,8 @@ Okay, let's wire it up in [webpack config](hello-js/webpack.config.js).
 Don't forget the [typescipt config](hello-js/tsconfig.json).
 
 Note, that it would be cooler to use the babel typescript loader for an wholesome experience, but it's only early 2019 yet.
+
+## State Management
+~~~
+npm add redux@^7.0.3 react-redux@^4.0.1
+~~~
