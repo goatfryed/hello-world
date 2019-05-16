@@ -1,13 +1,13 @@
 import {render} from "react-dom";
 import * as React from "react";
-import MessageViewer from "./MessageViewer";
 import {initialMessage} from "./Message";
+import FunctionalMessageViewer from "./FunctionalMessageViewer";
 
 window.addEventListener(
     "DOMContentLoaded",
     function () {
         render(
-            <MessageViewer initialMessage={initialMessage}/>,
+            <FunctionalMessageViewer initialMessage={initialMessage}/>,
             document.getElementById("app")
         );
     }
