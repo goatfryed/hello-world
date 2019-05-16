@@ -99,3 +99,16 @@ npm add html-webpack-plugin@^3.2
 Okay, enough of the ugliness. We want to beautify our website with some need styling and responsiveness.
 Of course, writing real css is for some crazy, insane devil-gods. So we skip this part and add just some
 [look-good-classes](https://bulma.io/documentation/overview/start/). Responsiveness included.
+
+## Typescript
+Writing PHP sucks. Writing javascript sucks. Writing css sucks. You know what sucks to? You guessed it.
+
+~~~
+npm add @typescript@^3.4 ts-loader@^5.3 @types/react @types/react-dom
+~~~
+Writing shell commands is probably the only thing, that's never gonna suck.
+
+Okay, let's wire it up in [webpack config](hello-js/webpack.config.js).
+Don't forget the [typescipt config](hello-js/tsconfig.json).
+
+Note, that it would be cooler to use the babel typescript loader for an wholesome experience, but it's only early 2019 yet.

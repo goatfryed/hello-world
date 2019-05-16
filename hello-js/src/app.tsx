@@ -1,22 +1,21 @@
-import React from "react";
 import {render} from "react-dom";
+import * as React from "react";
 
 const App = () => <div className="container">
     <h1 className="title">
-        Hello, World, from react, javascript, webpack, nginx & docker!
+        Hello, World, from react, typescript, javascript, webpack, nginx & docker!
     </h1>
     <p className="subtitle">
         Definitely just a simple hello.
     </p>
-</div>
-
+</div>;
 
 window.addEventListener(
     "DOMContentLoaded",
     function () {
         render(
-            <App/>,
+            <App />,
             document.getElementById("app")
-        )
+        );
     }
 );
