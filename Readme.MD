@@ -119,3 +119,8 @@ class components & functional components
 ## REST in peace
 I know, it's 2019, rest is out and we'll come back to that. But rest is still quite relevant, so lets build a rest api first.
 
+## Hello Database
+Of course, a real world application needs to persist some data in a database. Relational databases are not the only choice
+anymore, but we'll come to that later. They are still important and the trend goes towards postgres.
+
+Let's add some postgresql to our docker network. For now, we won't care about persistent data.

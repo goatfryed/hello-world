@@ -21,3 +21,14 @@ services:
     working_dir: "/hello-php"
     #expose: ## often seen, but it's more documentation than anything useful.
     #  - 9000
+    links:
+      - rdbms
+  rdbms:
+    image: postgres:11.2-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devel
+      POSTGRES_DB: hello-world
