@@ -1,29 +1,21 @@
 <?php
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MessageController
 {
     /**
-     * @Route("/")
-     * @return Response
+     * @Route("/message/")
+     * @return JsonResponse
      */
-    public function hello()
+    public function hello(): JsonResponse
     {
-        return new Response(<<<HTML
-            <!DOCTYPE html>
-            <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <title>Hello World!</title>
-                    <link rel="icon" type="image/png" href="favicon.png">
-                </head>
-                <body>
-                    Hello World from symfony, html, php, nginx &amp; docker!
-                </body>
-            </html>
-        HTML);
+        return new JsonResponse(
+            [
+                "message" => "Hello World from json, symfony, php, nginx, docker!"
+            ]
+        );
     }
 }

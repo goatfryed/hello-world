@@ -115,3 +115,7 @@ Note, that it would be cooler to use the babel typescript loader for an wholesom
 
 ## Having fun with react components
 class components & functional components
+
+## REST in peace
+I know, it's 2019, rest is out and we'll come back to that. But rest is still quite relevant, so lets build a rest api first.
+
