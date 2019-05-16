@@ -77,3 +77,13 @@ Luckily, it's 2019, so it's only half the internet anymore.
 ~~~
 added 879 packages from 479 contributors and audited 15726 packages in 54.277s
 ~~~
+
+## Render static site from javascript
+Because
+* versioning against browser caching
+* smaller javascript chunks without worrying about including the chunks
+* reasons
+
+~~~
+npm add html-webpack-plugin@^3.2
+~~~
