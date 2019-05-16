@@ -1,20 +1,13 @@
 import {render} from "react-dom";
 import * as React from "react";
-
-const App = () => <div className="container">
-    <h1 className="title">
-        Hello, World, from react, typescript, javascript, webpack, nginx & docker!
-    </h1>
-    <p className="subtitle">
-        Definitely just a simple hello.
-    </p>
-</div>;
+import MessageViewer from "./MessageViewer";
+import {initialMessage} from "./Message";
 
 window.addEventListener(
     "DOMContentLoaded",
     function () {
         render(
-            <App />,
+            <MessageViewer initialMessage={initialMessage}/>,
             document.getElementById("app")
         );
     }
