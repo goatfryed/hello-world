@@ -123,4 +123,18 @@ I know, it's 2019, rest is out and we'll come back to that. But rest is still qu
 Of course, a real world application needs to persist some data in a database. Relational databases are not the only choice
 anymore, but we'll come to that later. They are still important and the trend goes towards postgres.
 
-Let's add some postgresql to our docker network. For now, we won't care about persistent data.
+Let's add some postgresql to our docker network. We should add a volume to the data path to persist data accross docker restarts.
+
+## ORM
+Because writing sql sucks.
+~~~
+composer req orm
+~~~
+
+Then we'll map our message model via annotations to the database and generate a scheme in our php container.
+~~~
+bin/console doctrine:migrations:diff
+bin/console doctrine:migrations:migrate
+~~~
+We're using migrations to automatically update the database in incremental steps. For our purpose,
+we're adding the message 1 in our first migration.

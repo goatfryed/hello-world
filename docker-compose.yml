@@ -1,5 +1,8 @@
 version: "3"
 
+volumes:
+  hello-postgres-world:
+    external: true
 services:
   web:
     image: nginx:1.15-alpine
@@ -13,7 +16,7 @@ services:
     links:
       - php
   php:
-    image: php:7.3-fpm-alpine
+    build: "./develop/php/"
     volumes:
       - "./hello-php/:/hello-php/"
       - "./develop/composer.phar:/bin/composer"
@@ -32,3 +35,5 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: devel
       POSTGRES_DB: hello-world
+    volumes:
+      - "hello-postgres-world:/var/lib/postgresql/data"

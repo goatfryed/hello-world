@@ -3,17 +3,37 @@
 
 namespace App\Model;
 
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity()
+ */
 class Message
 {
+    /**
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @var int
+     */
+    public $id;
 
-    /** @var string */
+    /**
+     * @ORM\Column()
+     * @var string
+     */
     public $message;
 
-    /** @var string */
+    /**
+     * @ORM\Column()
+     * @var string
+     */
     public $from;
 
-    /** @var array  */
+    /**
+     * @ORM\Column(type="json_array")
+     * @var array
+     */
     public $others = [];
 
     /**

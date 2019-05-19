@@ -8,19 +8,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class MessageController
 {
     /**
-     * @Route("/rest/message/")
+     * @Route("/rest/message/{message}", requirements={"message"="\d+"}, defaults={"message"="1"})
      * @return JsonResponse
      */
-    public function hello(): JsonResponse
+    public function hello(Message $message): JsonResponse
     {
 
         return new JsonResponse(
             [
-                "message" => (new Message(
-                    "Hello World from {from} with {others}",
-                    "json",
-                    ["symfony", "php", "nginx", "docker"])
-                )->getText()
+                "message" => $message->getText()
             ]
         );
     }
