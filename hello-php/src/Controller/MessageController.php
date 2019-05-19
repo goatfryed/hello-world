@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Model\Message;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,9 +13,14 @@ class MessageController
      */
     public function hello(): JsonResponse
     {
+
         return new JsonResponse(
             [
-                "message" => "Hello World from json, symfony, php, nginx, docker!"
+                "message" => (new Message(
+                    "Hello World from {from} with {others}",
+                    "json",
+                    ["symfony", "php", "nginx", "docker"])
+                )->getText()
             ]
         );
     }
