@@ -14,10 +14,12 @@ class MessageController
     public function hello(Message $message): JsonResponse
     {
 
-        return new JsonResponse(
+        $response = new JsonResponse(
             [
                 "message" => $message->getText()
             ]
         );
+        $response->headers->add(["Cross-Origin-Restriction-Policy" => "*"]);
+        return $response;
     }
 }
