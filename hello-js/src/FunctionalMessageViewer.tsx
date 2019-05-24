@@ -7,7 +7,15 @@ export default ({initialMessage}: MessageProps): ReactElement => {
 
     useEffect(
         () => {
-            setTimeout(() => setMessage(helloMessage))
+            setTimeout(() => {
+               fetch(
+                   "http://hello.php.test/rest/message"
+               ).then(value =>
+                    value.json()
+               ).then(
+                   value => setMessage(value.message)
+               )
+            });
         }
     );
 
@@ -17,6 +25,9 @@ export default ({initialMessage}: MessageProps): ReactElement => {
         </h1>
         <p className="subtitle">
             Most definitely just a simple hello.
+        </p>
+        <p className="subtitle">
+            Proudly made with react in typescript
         </p>
     </div>;
 };
