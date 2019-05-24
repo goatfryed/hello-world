@@ -19,7 +19,7 @@ class MessageController
                 "message" => $message->getText()
             ]
         );
-        $response->headers->add(["Cross-Origin-Restriction-Policy" => "*"]);
+        $response->headers->add(["Access-Control-Allow-Origin" => "*"]);
         return $response;
     }
 }
