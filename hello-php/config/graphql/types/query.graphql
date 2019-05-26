@@ -1,0 +1,13 @@
+type Query {
+  getMessageSupporter(message: ID!): SupporterInfo
+}
+
+type SupporterInfo {
+  oneliner: String!
+  supportedBy: [Support]!
+}
+
+type Support {
+    name: String!
+    type: String!
+}
