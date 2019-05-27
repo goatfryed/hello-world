@@ -51,6 +51,11 @@ class Message
 
     public function getText()
     {
+        return $this->message;
+    }
+
+    public function getFullText()
+    {
         $text = $this->message;
         if ( $this->from) {
             $text = str_replace("{from}", $this->from, $text);

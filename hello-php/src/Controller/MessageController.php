@@ -9,6 +9,7 @@ class MessageController
 {
     /**
      * @Route("/rest/message/{message}", requirements={"message"="\d+"}, defaults={"message"="1"})
+     * @param Message $message
      * @return JsonResponse
      */
     public function hello(Message $message): JsonResponse
