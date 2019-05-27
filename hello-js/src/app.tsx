@@ -1,8 +1,9 @@
 import {render} from "react-dom";
 import * as React from "react";
 import {initialMessage} from "./Message";
-import FunctionalMessageViewer from "./FunctionalMessageViewer";
+import MessageViewer from "./MessageViewer";
 import ApolloClient, {gql} from "apollo-boost";
+import ApolloProvider from "react-apollo/ApolloProvider";
 
 window.addEventListener(
     "DOMContentLoaded",
@@ -11,20 +12,12 @@ window.addEventListener(
            uri: "http://hello.php.test/graphql/"
         });
 
-        client.query({
-            query: gql`
-               query {
-                  getMessageSupporter(message: 1) {
-                    oneliner
-                  }
-               }
-            `
-        }).then(
-            result => console.log(result.data.getMessageSupporter.oneliner)
-        );
+        client.initQueryManager();
 
         render(
-            <FunctionalMessageViewer initialMessage={initialMessage}/>,
+            <ApolloProvider client={client}>
+                <MessageViewer initialMessage={initialMessage}/>
+            </ApolloProvider>,
             document.getElementById("app")
         );
     }

@@ -25,7 +25,7 @@ final class Version20190519125208 extends AbstractMigration
         $this->addSql('CREATE SEQUENCE message_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
         $this->addSql('CREATE TABLE message (id INT NOT NULL, message VARCHAR(255) NOT NULL, "from" VARCHAR(255) NOT NULL, others JSON NOT NULL, PRIMARY KEY(id))');
         $this->addSql('COMMENT ON COLUMN message.others IS \'(DC2Type:json_array)\'');
-        $this->addSql( 'INSERT INTO message VALUES (1, \'Hello World from {from} with {others}\', \'postgres\', json_build_array(\'symfony\', \'php\', \'nginx\', \'docker\'))');
+        $this->addSql( 'INSERT INTO message VALUES (1, \'Hello, World!\', \'postgres\', json_build_array(\'symfony\', \'php\', \'nginx\', \'docker\'))');
     }
 
     public function down(Schema $schema) : void

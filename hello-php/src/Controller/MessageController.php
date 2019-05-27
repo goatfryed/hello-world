@@ -17,7 +17,8 @@ class MessageController
 
         $response = new JsonResponse(
             [
-                "message" => $message->getText()
+                "id" => $message->id,
+                "message" => $message->getText(),
             ]
         );
         return $response;
