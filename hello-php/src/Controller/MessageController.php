@@ -19,7 +19,6 @@ class MessageController
                 "message" => $message->getText()
             ]
         );
-        $response->headers->add(["Access-Control-Allow-Origin" => "*"]);
         return $response;
     }
 }
